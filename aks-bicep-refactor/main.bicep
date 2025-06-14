@@ -7,10 +7,19 @@ param location string = resourceGroup().location
 param clusterName string = 'cofeeCluster'
 
 @description('Kubernetes version')
-@param kubernetesVersion string
+param kubernetesVersion string
 
 @description('Enable RBAC')
 param enableRBAC bool = true
+
+@description('Enable auto scaling')
+param autoScale bool = true
+
+@description('minimum number of nodes')
+param minCount int = 1
+
+@description('maximum number of nodes')
+param maxCount int = 5
 
 resource aksCluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
   name: clusterName
@@ -30,6 +39,9 @@ resource aksCluster 'Microsoft.ContainerService/managedClusters@2023-07-01' = {
         vmSize: 'Standard_DS2_v2'
         osType: 'Linux'
         osDiskSizeGB: 30
+        enableAutoScaling: autoScale
+        minCount: minCount
+        maxCount: maxCount
       }
     ]
   }
