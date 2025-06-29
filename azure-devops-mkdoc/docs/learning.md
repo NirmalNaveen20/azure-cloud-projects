@@ -1,0 +1,4 @@
+# Learning
+
+I am currently learning about Azure DevOps, focusing on its features such as pipelines, boards, and repositories. I am also exploring how to integrate Azure DevOps with other tools and services to enhance the software development lifecycle. My goal is to become proficient in using Azure DevOps for continuous integration and continuous deployment (CI/CD) practices.
+I am also interested in learning about infrastructure as code (IaC) using tools like Bicep and Terraform, as well as container orchestration with Kubernetes. Additionally, I am enhancing my skills in scripting languages like PowerShell and Python to automate tasks and improve efficiency in DevOps processes.
